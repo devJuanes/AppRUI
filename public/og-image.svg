@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Consulta tu RUI con cédula">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F8FAFF"/>
+      <stop offset="50%" stop-color="#F2F4F8"/>
+      <stop offset="100%" stop-color="#EEF6FF"/>
+    </linearGradient>
+    <linearGradient id="btn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5AC8FA"/>
+      <stop offset="100%" stop-color="#007AFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="80" y="90" width="1040" height="450" rx="36" fill="#FFFFFF" stroke="#E5E5EA"/>
+  <rect x="120" y="140" width="72" height="72" rx="18" fill="url(#btn)"/>
+  <circle cx="156" cy="176" r="18" fill="none" stroke="#fff" stroke-width="6"/>
+  <text x="220" y="188" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="800" fill="#1C1C1E">Consultar RUI</text>
+  <text x="120" y="280" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="800" fill="#1C1C1E">Consulta tu RUI con cédula</text>
+  <text x="120" y="350" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="800" fill="#1C1C1E">fácil y rápido en Colombia</text>
+  <text x="120" y="420" font-family="Segoe UI, Arial, sans-serif" font-size="28" fill="#8E8E93">Clasificación RUI · Grupo y nivel · Resultado al instante</text>
+  <rect x="120" y="460" width="280" height="48" rx="14" fill="#007AFF"/>
+  <text x="260" y="492" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">Consultar ahora</text>
+</svg>

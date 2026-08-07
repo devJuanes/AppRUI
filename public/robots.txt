@@ -1,0 +1,25 @@
+# Consultar RUI — robots para indexación
+# Dominio: https://rui.matubyte.com
+User-agent: *
+Allow: /
+Allow: /favicon.svg
+Allow: /og-image.png
+Allow: /brand/logo.png
+Allow: /sitemap.xml
+Allow: /sitemap-index.xml
+Allow: /site.webmanifest
+
+# Resultados personales: no indexar
+Disallow: /resultado/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /resultado/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /resultado/
+
+# Enviar en Google Search Console:
+Sitemap: https://rui.matubyte.com/sitemap-index.xml
+Sitemap: https://rui.matubyte.com/sitemap.xml

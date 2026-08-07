@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "SF Pro Display", "SF Pro Text", "Segoe UI", ui-sans-serif,
+    system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --color-blue: #007aff;
+  --color-blue-soft: #e8f1ff;
+  --color-indigo: #5856d6;
+  --color-green: #34c759;
+  --color-green-soft: #e8f8ee;
+  --color-orange: #ff9500;
+  --color-red: #ff3b30;
+  --color-text: #1c1c1e;
+  --color-text-secondary: #3a3a3c;
+  --color-muted: #8e8e93;
+  --color-border: #e5e5ea;
+  --color-fill: #f2f2f7;
+  --color-bg: #f5f5f7;
+  --color-surface: #ffffff;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button,
+  input,
+  select {
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 14px;
+    background: var(--color-blue);
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 6px 16px rgb(0 122 255 / 0.28);
+    transition:
+      transform 0.12s ease,
+      box-shadow 0.12s ease,
+      filter 0.12s ease,
+      background-color 0.12s ease;
+  }
+
+  .btn-primary:hover:not(:disabled) {
+    filter: brightness(1.06);
+    box-shadow: 0 8px 20px rgb(0 122 255 / 0.34);
+    transform: translateY(-1px);
+  }
+
+  .btn-primary:active:not(:disabled) {
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 0 2px 8px rgb(0 122 255 / 0.22);
+    filter: brightness(0.96);
+  }
+
+  .btn-primary:disabled {
+    background: color-mix(in srgb, var(--color-blue) 50%, white);
+    box-shadow: none;
+    transform: none;
+    filter: none;
+  }
+
+  .btn-ghost {
+    transition:
+      transform 0.12s ease,
+      background-color 0.12s ease,
+      color 0.12s ease;
+  }
+
+  .btn-ghost:hover:not(:disabled) {
+    color: var(--color-text);
+  }
+
+  .btn-ghost:active:not(:disabled) {
+    transform: scale(0.97);
+  }
+
+  .btn-soft {
+    transition:
+      transform 0.12s ease,
+      background-color 0.12s ease,
+      box-shadow 0.12s ease;
+  }
+
+  .btn-soft:hover:not(:disabled) {
+    background: color-mix(in srgb, var(--color-fill) 70%, var(--color-border));
+  }
+
+  .btn-soft:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+}
+
+@layer utilities {
+  .page-gradient {
+    background: linear-gradient(135deg, #f8faff 0%, #f2f4f8 50%, #eef6ff 100%);
+  }
+
+  .glass {
+    background: rgb(255 255 255 / 0.8);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgb(255 255 255 / 0.7);
+    box-shadow: 0 12px 28px rgb(0 0 0 / 0.06);
+  }
+}

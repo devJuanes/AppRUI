@@ -9,10 +9,10 @@ type Props = {
 }
 
 const DEFAULT_TITLE =
-  'Consulta tu RUI con cédula fácil y rápido | Clasificación RUI Colombia'
+  'Consultar RUI con cédula gratis | Clasificación RUI Colombia online'
 
 const DEFAULT_DESCRIPTION =
-  'Consulta tu clasificación RUI en Colombia con tu número de cédula, fácil y rápido. Resultado al instante: grupo y nivel RUI.'
+  'Consulta tu RUI con cédula en Colombia gratis y online. Mira tu grupo y nivel RUI al instante. Alternativa rápida a Ventanilla Social / RSH (DNP).'
 
 function setMeta(attr: 'name' | 'property', key: string, content: string) {
   let el = document.head.querySelector<HTMLMetaElement>(

@@ -81,15 +81,15 @@ export function HomePage() {
       <main className="flex min-h-0 flex-1 items-center justify-center px-5 py-3">
         <div className="w-full max-w-[420px] md:max-w-[520px]">
           <h1 className="mb-2 text-center text-[24px] leading-[1.15] font-extrabold tracking-[-1px] text-text md:mb-3 md:text-[34px]">
-            Consulta tu RUI con tu cédula
+            Consultar RUI con tu cédula
             <br />
-            fácil y rápido
+            gratis y online
           </h1>
           <p className="mb-5 text-center text-[13px] leading-snug text-muted md:mb-7 md:text-[15px]">
-            Clasificación RUI en Colombia: grupo y nivel al instante.
+            Clasificación RUI Colombia: grupo y nivel al instante.
             <span className="hidden sm:inline">
               {' '}
-              Sin esperas de la página del Estado.
+              Cómo saber tu RUI sin filas de Ventanilla Social.
             </span>
           </p>
           <ConsultaForm
@@ -102,10 +102,10 @@ export function HomePage() {
           />
           {/* Texto semántico para buscadores; compacto en UI */}
           <p className="sr-only">
-            Consulta RUI Colombia con número de cédula. Consultar clasificación
-            RUI, grupo RUI y nivel RUI online fácil y rápido. Datos vía
-            Ventanilla Social DNP y RSH. Alternativa rápida para consultar tu
-            puntaje RUI.
+            Consultar RUI Colombia gratis con número de cédula. Cómo consultar
+            el RUI online: clasificación RUI, grupo RUI y nivel RUI. Registro
+            Único de Ingresos, Ventanilla Social DNP y Registro Social de
+            Hogares (RSH). Saber mi RUI y consultar puntaje RUI fácil y rápido.
           </p>
         </div>
       </main>

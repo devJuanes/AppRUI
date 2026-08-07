@@ -6,7 +6,7 @@
 >
   <url>
     <loc>https://rui.matubyte.com/</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es-CO" href="https://rui.matubyte.com/" />
@@ -14,19 +14,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rui.matubyte.com/" />
     <image:image>
       <image:loc>https://rui.matubyte.com/og-image.png</image:loc>
-      <image:title>Consulta tu RUI con cédula fácil y rápido</image:title>
+      <image:title>Consultar RUI con cédula gratis online</image:title>
       <image:caption>Clasificación RUI Colombia — grupo y nivel con tu número de cédula</image:caption>
-    </image:image>  
+    </image:image>
   </url>
   <url>
     <loc>https://rui.matubyte.com/consulta-rui-cedula.html</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rui.matubyte.com/consultar-rui-online.html</loc>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://rui.matubyte.com/clasificacion-rui-colombia.html</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

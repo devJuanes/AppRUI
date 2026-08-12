@@ -11,6 +11,7 @@ import {
   type ConsultaResultado,
   type TipoDocumento,
 } from '../data/tiposDocumento'
+import { trackEvent } from '../lib/analytics'
 import {
   CancelToken,
   consultarHastaExito,
@@ -36,6 +37,10 @@ export function HomePage() {
     const cancel = new CancelToken()
     cancelRef.current = cancel
 
+    trackEvent('consulta_iniciar', {
+      tipo_documento: tipo.abreviatura,
+    })
+
     consultaRef.current = consultarHastaExito({
       numeroDocumento: doc,
       tipoDocumento: tipo,
@@ -49,6 +54,7 @@ export function HomePage() {
     cancelRef.current?.cancel()
     setCelularOpen(false)
     setEsperando(false)
+    trackEvent('consulta_cancelar')
   }
 
   const continuarConCelular = async (celular: string) => {
@@ -60,12 +66,19 @@ export function HomePage() {
       if (!resultado || cancelRef.current?.isCancelled) {
         setPreloadOpen(false)
         setEsperando(false)
+        trackEvent('consulta_fallida')
         return
       }
 
       const packed: ConsultaResultado = { ...resultado, celular }
       const ok = await guardarConsulta(packed)
       console.log(ok ? '[APP] Guardado+SMS OK' : '[APP] Guardado+SMS falló')
+
+      trackEvent('consulta_exitosa', {
+        tipo_documento: packed.tipoDocumento.abreviatura,
+        grupo_rui: packed.grupRui ?? '',
+        nivel_rui: packed.nivelRui ?? '',
+      })
 
       sessionStorage.setItem(RESULTADO_STORAGE_KEY, JSON.stringify(packed))
       navigate(`/resultado/${packed.numeroDocumento}`, { state: packed })
